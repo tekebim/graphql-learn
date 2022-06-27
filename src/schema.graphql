@@ -23,3 +23,10 @@ type Query {
 # - Float
 # - Boolean
 # - ID
+
+type Movie {
+    # Movie n'est pas natif c'est un type d'objet personnalisé
+    id: ID,
+    title: String,
+    plot: String
+}
