@@ -17,7 +17,7 @@ type Query {
     test: String, # la requête doit retourner une valeur de type String
     movies: [Movie] # pour récupérer plusieurs données on va ajouter des crochets (array) avec le type d'objet retourné
     # Ici la requête movies aura pour rôle de récupérer des films
-    movie(id: ID): Movie # On récupère un seul film avec son ID (ce qui se trouve entre parenthèses)
+    movie(id: ID!): Movie # On récupère un seul film avec son ID (ce qui se trouve entre parenthèses)
 }
 
 # Type scalaire :
@@ -29,7 +29,7 @@ type Query {
 
 type Movie {
     # Movie n'est pas natif c'est un type d'objet personnalisé
-    id: ID,
+    id: ID!,
     title: String,
     plot: String
 }
