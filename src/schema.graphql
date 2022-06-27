@@ -3,3 +3,10 @@
 # Schema contient les types objets
 # Les types objets vont représenter les requêtes que l'on va pouvoir executer
 # Ainsi que les données que l'on va pouvoir récupérer
+
+# Resolver va exécuter les requêtes et récupérer réellement les données
+
+# GraphQL ne fonctionne qu'avec des VERB : POST
+# GraphQL comporte trois types objets par défaut :
+# - Query (va gérer les requêtes)
+# - Mutation (va gérer l'ajout / modification / suppression de nouvelles données)
