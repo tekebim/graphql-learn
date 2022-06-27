@@ -23,6 +23,9 @@ const resolvers = {
     // Query fait référence au type Query du schema.graphql
     test: () => {
       return hello
+    },
+    movies: () => {
+      return movies
     }
   }
 }
