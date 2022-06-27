@@ -17,6 +17,7 @@ type Query {
     test: String, # la requête doit retourner une valeur de type String
     movies: [Movie] # pour récupérer plusieurs données on va ajouter des crochets (array) avec le type d'objet retourné
     # Ici la requête movies aura pour rôle de récupérer des films
+    movie: Movie
 }
 
 # Type scalaire :
