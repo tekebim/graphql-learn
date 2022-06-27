@@ -26,6 +26,10 @@ const resolvers = {
     },
     movies: () => {
       return movies
+    },
+    movie: (parent, args, context, info) => {
+      return movies.find((movie) => movie.id == args.id)
+      // args se trouve toujours en deuxième paramètre, il contient les paramètres de la requête.
     }
   }
 }
