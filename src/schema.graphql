@@ -1,0 +1,5 @@
+# GraphQL
+
+# Schema contient les types objets
+# Les types objets vont représenter les requêtes que l'on va pouvoir executer
+# Ainsi que les données que l'on va pouvoir récupérer
