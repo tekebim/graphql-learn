@@ -33,3 +33,6 @@ type Movie {
     title: String,
     plot: String
 }
+
+# under-fetching : le fait de ne pas récupérer assez de données par rapport à ce qui est demandé.
+# over-fetching : je veux récupérer juste une donnée des utilisateurs, je récupère la totalité.
