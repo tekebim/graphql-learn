@@ -10,3 +10,16 @@
 # GraphQL comporte trois types objets par défaut :
 # - Query (va gérer les requêtes)
 # - Mutation (va gérer l'ajout / modification / suppression de nouvelles données)
+
+type Query {
+    # On va préciser les requêtes que l'on peut exécuter dans le resolver
+    # Le type Query est natif à GraphQL
+    test: String # la requête doit retourner une valeur de type String
+}
+
+# Type scalaire :
+# - String
+# - Int
+# - Float
+# - Boolean
+# - ID
