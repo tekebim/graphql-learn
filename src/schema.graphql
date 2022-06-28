@@ -18,4 +18,9 @@ type Mutation {
 }
 
 # Un fragment GraphQL permet de regrouper un ensemble de sous-champs appartenant à un type Object
-# Il va peremttre de récupérer ces sous-champs rapidement et facilement (par exemple, lorsque l'on execute des comparaisons entre plusieurs données).
+# Il va permettre de récupérer ces sous-champs rapidement et facilement (par exemple, lorsque l'on execute des comparaisons entre plusieurs données).
+# On a la possibilité de créer des variables nous permettant simplement de choisir des valeurs dynamiques
+# Directives :
+# - @include (si True, on récupère la donnée et inversement)
+# - @skip (le contraire de include)
+# - @deprecated('') : permet de préciser si un sous-champ n'est plus utilisé
