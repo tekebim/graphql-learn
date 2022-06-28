@@ -16,3 +16,6 @@ type Mutation {
     editUser(id:ID!, name:String, email:String, password:String): User,
     deleteUser(id:ID!): Boolean!
 }
+
+# Un fragment GraphQL permet de regrouper un ensemble de sous-champs appartenant à un type Object
+# Il va peremttre de récupérer ces sous-champs rapidement et facilement (par exemple, lorsque l'on execute des comparaisons entre plusieurs données).
