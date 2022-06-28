@@ -31,6 +31,19 @@ const resolvers = {
       return movies.find((movie) => movie.id == args.id)
       // args se trouve toujours en deuxième paramètre, il contient les paramètres de la requête.
     }
+  },
+  Mutation: {
+    addMovie: (parent, args) => {
+      // Le corps de la fonction sera adaptée dans un cas concret.
+      let movie = {
+        id: movies.length + 1,
+        title: args.title,
+        plot: args.plot
+      };
+      movies.push(movie);
+
+      return movie;
+    }
   }
 }
 
