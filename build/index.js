@@ -470,6 +470,18 @@ const resolvers = {
       }
 
       return users[indexUserFound];
+    },
+    deleteUser: (parent, args) => {
+      const indexUserFound = users.findIndex(user => {
+        return user.id == args.id;
+      });
+
+      if (!indexUserFound) {
+        return false;
+      }
+
+      users.splice(indexUserFound, 1);
+      return true;
     }
   }
 };
