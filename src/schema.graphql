@@ -39,7 +39,7 @@ type Movie {
 
 
 type Mutation {
-    addMovie(id: ID!, title: String!, plot: String!): Movie
+    addMovie(id: ID, title: String!, plot: String!): Movie
 }
 # Type Mutation : permet de représenter les requêtes d'insertion, de modification ou de suppression de données
 # GraphQL n'emploi que la méthode POST dans ses requêtes, il faut donc pouvoir les différencier.
