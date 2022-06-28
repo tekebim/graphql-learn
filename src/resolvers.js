@@ -42,6 +42,39 @@ const resolvers = {
     latestUsers: () => {
       return users.slice(-3);
     }
+  },
+  Mutation: {
+    addUser: (parent, args) => {
+      let user = {
+        id: users.length + 1,
+        name: args.name,
+        email: args.email,
+        password: args.password,
+      }
+
+      users.push(user);
+
+      return user;
+    },
+    editUser: (parent, args) => {
+      const indexUserFound = users.findIndex(user => {
+        return user.id == args.id;
+      });
+
+      if (args.name !== null && args.name !== undefined) {
+        users[indexUserFound].name = args.name
+      }
+
+      if (args.email !== null && args.email !== undefined) {
+        users[indexUserFound].email = args.email
+      }
+
+      if (args.password !== null && args.password !== undefined) {
+        users[indexUserFound].password = args.password
+      }
+
+      return users[indexUserFound];
+    }
   }
 }
 
