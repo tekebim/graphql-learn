@@ -9,6 +9,7 @@ type User {
     name: String!,
     email: String!,
     password: String!,
+    role: Role
 }
 
 type Mutation {
@@ -24,3 +25,9 @@ type Mutation {
 # - @include (si True, on récupère la donnée et inversement)
 # - @skip (le contraire de include)
 # - @deprecated('') : permet de préciser si un sous-champ n'est plus utilisé
+
+
+enum Role {
+    Admin,
+    Client
+}
