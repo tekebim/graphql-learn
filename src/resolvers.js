@@ -61,6 +61,10 @@ const resolvers = {
         return user.id == args.id;
       });
 
+      if (indexUserFound == -1) {
+        return false;
+      }
+
       if (args.name !== null && args.name !== undefined) {
         users[indexUserFound].name = args.name
       }
@@ -80,11 +84,11 @@ const resolvers = {
         return user.id == args.id;
       });
 
-      if (!indexUserFound) {
-        return false
+      if (indexUserFound == -1) {
+        return false;
       }
 
-      users.splice(indexUserFound, 1)
+      users.splice(indexUserFound, 1);
       return true;
     }
   }
